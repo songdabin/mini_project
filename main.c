@@ -59,8 +59,17 @@ int main(){
                         }
                         printf("\n-----별점추가-----\n");
                         updateStar(&p[no-1]);
-                }   
-                else if (menu==5){
+                }
+	       else if (menu==5){
+                        searchProduct(p, index);
+                }
+                else if (menu==6){
+                        searchPrice(p, index);
+                }
+                else if (menu==7){
+                        searchStar(p, index);
+                }
+                else if (menu==8){
                         int no=selectNum(p, index);
                         if (no==0){
                                 printf("취소됨!\n");
@@ -73,7 +82,7 @@ int main(){
                                 printf("\n-----제품삭제-----\n");
                                 int isDel=deleteProduct(&p[no-1]);
                                 if (isDel==1) {
-                                        printf("=> 삭제됨!\n");
+                                        printf("=> 삭제됨!\n");	
                                         index--;
                                 }
                         }
