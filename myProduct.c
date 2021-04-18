@@ -51,3 +51,13 @@ int deleteProduct(Product *p){
         p->star_cnt=-1;
         return 1;
 }
+void saveFile(Product *p, int count){
+        FILE *f;
+        f=fopen("product.txt", "wt");
+        for (int i=0; i<count; i++) {
+                if (p[i].price==-1) continue;
+                fprintf("%s %d %d %d %d\n", p[i].name, p[i].weight, p[i].price, p[i].star, p[i].star_cnt);
+        }
+        printf("저장됨!\n");
+        fclose(f);
+}
