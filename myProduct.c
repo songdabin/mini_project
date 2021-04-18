@@ -99,3 +99,21 @@ void searchProduct(Product *p, int count){
         if (scnt==0) printf("=> 검색된 제품 없음!\n");
         printf("\n");
 }
+void searchPrice(Product *p, int count){
+        int price, scnt=0;
+
+        printf("제품 가격? ");
+        scanf("%d", &price);
+        printf("\n-----제품정보-----\n");
+        for (int i=0; i<count; i++) {
+                if (p[i].price==-1) continue;
+                if (price>=p[i].price) {
+                        printf("Product No.%d\n", i+1);
+                        readProduct(p[i]);
+                        scnt++;
+                        printf("\n");
+                }
+        }
+        if (scnt==0) printf("=> 검색된 제품 없음!\n");
+        printf("\n");
+}
