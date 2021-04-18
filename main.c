@@ -13,7 +13,12 @@ int selectMenu(){
         printf("2. 추가\n");
         printf("3. 수정\n");
         printf("4. 별점\n");
-        printf("5. 삭제\n");
+	printf("5. 제품 이름 검색\n");
+        printf("6. 제품 가격 검색\n");
+        printf("7. 제품 별점 검색\n");
+	printf("8. 삭제\n");
+        printf("9. 파일 저장\n");
+        printf("10. 파일 불러오기\n");
         printf("0. 종료\n\n");
         printf("=> 원하는 메뉴는? ");
         scanf("%d", &menu);
