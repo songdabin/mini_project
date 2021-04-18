@@ -61,3 +61,21 @@ void saveFile(Product *p, int count){
         printf("저장됨!\n");
         fclose(f);
 }
+void getFile(Product *p){
+        int count=0, i=0;
+        FILE *f;
+        f=fopen("product.txt", "rt");
+        if (f==NULL) printf("=> 파일 없음\n");
+        else {
+                for (; i<20; i++) {
+                        fscanf(f, "%s", p[i].name);
+                        if (feof(f)) break;
+                        fscanf(f, "%d", &p[i].weight);
+                        fscanf(f, "%d", &p[i].price);
+                        fscanf(f, "%d", &p[i].star);
+                        fscanf(f, "%d", &p[i].star_cnt);
+                }
+                printf("=> 로딩 성공!\n");
+        }
+        fclose(f);
+}
