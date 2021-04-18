@@ -87,6 +87,12 @@ int main(){
                                 }
                         }
                 }
+		else if (menu==9){
+                        saveFile(p, index);
+                }
+                else if (menu==10){
+                        getFile(p);
+                }
         }
         return 0;
 }
